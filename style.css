@@ -1,17 +1,17 @@
-/* Fondo degradado y estilo general */
+/* Fondo con degradado radial desde negro hasta rojo oscuro */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
   color: #ffffff;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  background: radial-gradient(circle at center, #8b0000, #000000);
   text-align: center;
 }
 
 /* Encabezado */
 header {
   padding: 40px 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
@@ -34,11 +34,12 @@ main {
 
 .juego {
   margin: 20px auto;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   padding: 20px;
   border-radius: 12px;
   width: 90%;
   max-width: 400px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 
 .juego h3 {
@@ -48,8 +49,8 @@ main {
 .boton {
   display: inline-block;
   padding: 12px 24px;
-  background: #00ffd0;
-  color: #000;
+  background: #ff4444;
+  color: white;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
@@ -57,7 +58,7 @@ main {
 }
 
 .boton:hover {
-  background: #00ccb3;
+  background: #ff0000;
 }
 
 /* Sobre mí */
@@ -69,6 +70,6 @@ main {
 /* Footer */
 footer {
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   font-size: 0.9em;
 }
