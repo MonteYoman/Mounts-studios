@@ -131,3 +131,26 @@ footer {
   transform: scale(1.05);
 }
 
+/* Estilos para la burbuja flotante de redes sociales */
+.burbuja {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde el fondo */
+  right: 20px; /* Ajusta la distancia desde el lado derecho */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Para asegurarse de que esté por encima de otros elementos */
+  transition: transform 0.3s ease;
+}
+
+.burbuja:hover {
+  transform: scale(1.1); /* Efecto de agrandar la burbuja al pasar el ratón */
+}
+
+/* Estilo del ícono (puedes cambiar la imagen del icono) */
+.icono {
+  width: 40px; /* Ajusta el tamaño del icono */
+  height: 40px;
+  object-fit: cover;
+}
