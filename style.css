@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #111, #8B0000); /* Degradado de negro a rojo oscuro */
+  background: radial-gradient(circle, #8B0000, #111); /* Degradado de rojo en el centro a negro en los bordes */
   color: #fff;
 }
 
