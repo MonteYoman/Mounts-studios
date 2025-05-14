@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at center, #300000, #000000); /* Fondo degradado radial */
+  background: radial-gradient(circle at center, #8B0000, #000000); /* Fondo degradado de rojo a negro */
   color: #fff;
 }
 
@@ -33,7 +33,7 @@ main {
 }
 
 .boton {
-  background: linear-gradient(to right, #8b0000, #ff0000);
+  background: linear-gradient(to right, #FF4500, #FF0000); /* Rojo brillante para los botones */
   color: white;
   padding: 0.6em 1.2em;
   border: none;
