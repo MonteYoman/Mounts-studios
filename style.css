@@ -131,3 +131,41 @@ footer {
   height: 40px;
   filter: invert(17%) sepia(95%) saturate(7496%) hue-rotate(247deg) brightness(92%) contrast(101%);
 }
+.puntuaciones {
+  padding: 2em;
+  background: linear-gradient(to right, #330000, #1a0000);
+  border-top: 2px solid #ff0000;
+  animation: fadeIn 1.5s ease;
+}
+
+.puntuaciones h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.puntuaciones table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  border: 1px solid #ff3333;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.puntuaciones th,
+.puntuaciones td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #ff3333;
+}
+
+.puntuaciones thead {
+  background-color: #2c0000;
+}
+
+.puntuaciones tbody tr:hover {
+  background-color: #440000;
+}
