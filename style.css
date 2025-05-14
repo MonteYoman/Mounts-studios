@@ -31,17 +31,22 @@ header p {
 /* Sección de juegos */
 .juegos {
   padding: 2em;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
 }
 
 .juego {
-  margin: 2em 0;
+  width: 90%;
+  max-width: 400px;
   padding: 1em;
-  background: linear-gradient(to right, #2c0000, #1a0000);
+  background: linear-gradient(to bottom, #2c0000, #1a0000);
   border: 1px solid #ff4444;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
   animation: fadeIn 1s ease;
+  text-align: center;
 }
 
 .juego h3 {
@@ -68,7 +73,7 @@ header p {
 /* Sección sobre mí */
 .sobre-mi {
   padding: 2em;
-  background-color: #1a1a1a;
+  background: linear-gradient(to right, #1a0000, #330000);
   border-top: 2px solid #ff0000;
   animation: fadeIn 1.5s ease;
 }
@@ -113,6 +118,12 @@ footer {
 
 .burbuja:hover {
   transform: scale(1.1);
+}
+
+.icono {
+  width: 40px;
+  height: 40px;
+  filter: invert(17%) sepia(95%) saturate(7496%) hue-rotate(247deg) brightness(92%) contrast(101%);
 }
 
 .icono {
