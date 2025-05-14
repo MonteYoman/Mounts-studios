@@ -58,40 +58,6 @@ main {
   transform: scale(1.05);
 }
 
-/* Sección de clasificaciones */
-.clasificaciones {
-  margin-top: 3em;
-  padding: 2em;
-  background-color: #333;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-  text-align: center;
-}
-
-.clasificaciones table {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 600px;
-  border-collapse: collapse;
-  background: #222;
-  border: 1px solid #ff3333;
-  border-radius: 10px;
-}
-
-.clasificaciones th,
-.clasificaciones td {
-  padding: 12px;
-  border-bottom: 1px solid #ff3333;
-}
-
-.clasificaciones thead {
-  background-color: #300000;
-}
-
-.clasificaciones tbody tr:hover {
-  background-color: #440000;
-}
-
 /* Sección "Sobre mí" */
 .sobre-mi {
   margin-top: 4em;
