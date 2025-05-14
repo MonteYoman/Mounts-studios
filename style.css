@@ -91,7 +91,7 @@ main {
   background-color: #440000;
 }
 
-/* Burbuja Discord */
+/* Burbuja Discord - Flotante en la esquina inferior derecha */
 .burbuja-discord {
   position: fixed;
   bottom: 20px;
@@ -105,8 +105,8 @@ main {
 }
 
 .burbuja-discord img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .burbuja-discord:hover {
