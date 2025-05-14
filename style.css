@@ -3,10 +3,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at center, #300000, #000000);
+  background: radial-gradient(circle at center, #300000, #000000); /* Fondo degradado */
   color: #fff;
 }
 
+/* Estilo para el header y footer */
 header, footer {
   text-align: center;
   padding: 2em;
@@ -21,6 +22,7 @@ main {
   padding: 2em;
 }
 
+/* Sección de juegos */
 .juegos {
   text-align: center;
   margin-bottom: 3em;
