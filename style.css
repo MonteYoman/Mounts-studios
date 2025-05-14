@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #8B0000, #000000); /* Fondo con degradado de rojo a negro */
+  background-color: #111; /* Fondo negro */
   color: #fff;
 }
 
@@ -11,7 +11,7 @@ body {
 header, footer {
   text-align: center;
   padding: 2em;
-  background: linear-gradient(to right, #3a0000, #1a0000);
+  background-color: #222; /* Fondo oscuro */
 }
 
 h1, h2, h3 {
@@ -24,16 +24,25 @@ main {
 
 /* Sección de juegos */
 .juegos {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 3em;
 }
 
 .juego {
-  margin: 1em auto;
+  background-color: #333; /* Cuadrado para cada juego */
+  padding: 1em;
+  margin: 1em 0;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  text-align: center;
 }
 
 .boton {
-  background: linear-gradient(to right, #FF4500, #FF0000); /* Rojo brillante para los botones */
+  background-color: #FF4500; /* Rojo */
   color: white;
   padding: 0.6em 1.2em;
   border: none;
@@ -49,20 +58,11 @@ main {
   transform: scale(1.05);
 }
 
-/* Sección "Sobre mí" */
-.sobre-mi {
-  margin-top: 4em;
-  padding: 2em;
-  background: rgba(20, 0, 0, 0.4);
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-}
-
 /* Sección de clasificaciones */
 .clasificaciones {
   margin-top: 3em;
   padding: 2em;
-  background: rgba(50, 0, 0, 0.4);
+  background-color: #333;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
   text-align: center;
@@ -73,7 +73,7 @@ main {
   width: 90%;
   max-width: 600px;
   border-collapse: collapse;
-  background: #1a1a1a;
+  background: #222;
   border: 1px solid #ff3333;
   border-radius: 10px;
 }
@@ -92,24 +92,11 @@ main {
   background-color: #440000;
 }
 
-/* Burbuja de Discord */
-.burbuja-discord {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #5865F2;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-  z-index: 999;
-}
-
-.burbuja-discord img {
-  width: 40px;
-  height: 40px;
-}
-
-.burbuja-discord:hover {
-  transform: scale(1.1);
+/* Sección "Sobre mí" */
+.sobre-mi {
+  margin-top: 4em;
+  padding: 2em;
+  background-color: #333;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
