@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mount's Studios</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968756.png">
 </head>
 <body>
   <header>
@@ -15,24 +16,56 @@
   <main>
     <section class="juegos">
       <h2>Juegos disponibles</h2>
-
-      <!-- Juego 1 -->
       <div class="juego">
         <h3>The Night Flier</h3>
         <a class="boton" href="juego1/index.html" target="_blank">▶ Jugar</a>
       </div>
-
-      <!-- Botón Misterioso -->
       <div class="juego">
         <h3>Misterioso</h3>
-        <p>Uy... esto es muy sospechoso. Me pregunto qué será esto.</p>
-        <a class="boton" href="#" onclick="return false;">🔒 No toques esto</a>
+        <a class="boton" href="#" onclick="alert('👀 Esto es muy sospechoso... me pregunto qué será esto')">
+          Huy, esto es muy sospechoso... me pregunto qué será esto
+        </a>
       </div>
     </section>
 
     <section class="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>Soy un desarrollador con experiencia en juegos 2D y ahora también 3D. Ya llevo 2 años trabajando en estos proyectos. He trabajado en diferentes proyectos de los cuales algunos tuvieron medio éxito y otros no tanto.</p>
+      <p>Soy un desarrollador con experiencia en juegos 2D y ahora también 3D. Ya llevo 2 años con estos proyectos. He trabajado en diferentes proyectos, de los cuales algunos tuvieron medio éxito y otros no tanto.</p>
+    </section>
+
+    <section class="puntuaciones">
+      <h2>🏆 Puntuaciones</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Jugador</th>
+            <th>Juego</th>
+            <th>Puntos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ShadowPlayer</td>
+            <td>The Night Flier</td>
+            <td>5420</td>
+          </tr>
+          <tr>
+            <td>MountX</td>
+            <td>The Night Flier</td>
+            <td>4780</td>
+          </tr>
+          <tr>
+            <td>NoobMaster</td>
+            <td>The Night Flier</td>
+            <td>3025</td>
+          </tr>
+          <tr>
+            <td>ZeroHero</td>
+            <td>The Night Flier</td>
+            <td>1800</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
@@ -40,11 +73,6 @@
     <p>© 2025 Mount's Studios. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Burbuja flotante con icono de Discord -->
-  <div class="burbuja">
-    <a href="https://discord.gg/TzxmZaCR5J" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord" class="icono">
-    </a>
-  </div>
-</body>
-</html>
+  <!-- Burbuja de redes -->
+  <a href="https://discord.gg/TzxmZaCR5J" target="_blank" class="burbuja-discord" title="Únete a nuestro Discord">
+    <img src="
