@@ -11,7 +11,7 @@ body {
 header, footer {
   text-align: center;
   padding: 2em;
-  background-color: rgba(34, 34, 34, 0.8); /* Fondo oscuro con algo de transparencia */
+  background-color: rgba(34, 34, 34, 0.8);
 }
 
 h1, h2, h3 {
@@ -31,48 +31,50 @@ main {
 }
 
 .juego {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente que hace un buen contraste con el fondo */
+  backdrop-filter: blur(10px); /* Difuminado */
+  background-color: rgba(255, 255, 255, 0.05); /* Casi transparente */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde tenue */
   padding: 2em;
   margin: 1.5em 0;
-  width: 80%;
+  width: 85%;
   max-width: 450px;
-  border-radius: 15px; /* Bordes redondeados */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra más amplia para dar efecto de profundidad */
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .juego:hover {
-  transform: scale(1.05); /* Efecto de aumentar ligeramente el tamaño cuando pasas el ratón por encima */
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 0, 0, 0.5);
 }
 
 .boton {
-  background-color: #FF4500; /* Rojo */
+  background-color: #FF4500;
   color: white;
-  padding: 0.6em 1.2em;
+  padding: 0.7em 1.4em;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   display: inline-block;
   margin-top: 1em;
-  box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.4);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .boton:hover {
   transform: scale(1.05);
-  background-color: #FF6347; /* Rojo más claro al hacer hover */
+  background-color: #FF6347;
 }
 
 /* Sección "Sobre mí" */
 .sobre-mi {
   margin-top: 4em;
   padding: 2em;
-  background-color: rgba(51, 51, 51, 0.7); /* Fondo semi-transparente */
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-}
-
-footer {
-  margin-top: 3em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
 }
