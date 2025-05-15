@@ -103,6 +103,7 @@ main {
 }
 
 /* Clasificación */
+/* Clasificación */
 .clasificacion {
   margin-top: 4em;
   padding: 2em;
@@ -117,24 +118,40 @@ main {
 
 .clasificacion h2 {
   margin-bottom: 1em;
+  font-size: 1.8em;
+}
+
+.tabla-contenedor {
+  display: flex;
+  justify-content: center;
 }
 
 .clasificacion table {
-  width: 100%;
+  width: 90%;
+  max-width: 700px;
   border-collapse: collapse;
-  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
 }
 
 .clasificacion th,
 .clasificacion td {
   padding: 1em;
+  text-align: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .clasificacion th {
-  background-color: rgba(255, 0, 0, 0.3);
-  border-radius: 10px;
+  background-color: rgba(255, 50, 50, 0.3);
   font-weight: bold;
+  color: #fff;
+}
+
+.clasificacion tr:last-child td {
+  border-bottom: none;
 }
 
 .clasificacion tr:hover {
