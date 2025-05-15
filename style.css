@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, #8B0000, #111); /* Degradado de rojo en el centro a negro en los bordes */
+  background: radial-gradient(circle, #8B0000, #111); /* Degradado de rojo al centro y negro en los bordes */
   color: #fff;
 }
 
@@ -31,15 +31,15 @@ main {
 }
 
 .juego {
-  backdrop-filter: blur(10px); /* Difuminado */
-  background-color: rgba(255, 255, 255, 0.05); /* Casi transparente */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Borde tenue */
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.3); /* Borde rojo brillante */
   padding: 2em;
   margin: 1.5em 0;
   width: 85%;
   max-width: 450px;
   border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.3); /* Sombra roja suave */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -73,8 +73,8 @@ main {
   margin-top: 4em;
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 20px rgba(255, 0, 0, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 0, 0, 0.3);
 }
