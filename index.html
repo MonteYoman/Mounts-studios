@@ -22,16 +22,10 @@
       <div class="juego-card">
         <h3>The Night Flier</h3>
         <p>Sobrevuela la noche, esquiva enemigos y supera todos los desafíos.</p>
-        <button class="boton" onclick="abrirJuego('juegos1/index.html')">▶ Jugar aquí</button>
-        <a class="boton" href="juegos1/index.html" target="_blank">🔗 Abrir en nueva ventana</a>
+        <!-- Botón para abrir en nueva pestaña -->
+        <button class="boton" onclick="window.open('juegos1/index.html', '_blank')">▶ Jugar aquí</button>
       </div>
 
-    </section>
-
-    <!-- Iframe del juego -->
-    <section id="iframe-container">
-      <button class="boton cerrar" onclick="cerrarJuego()">❌ Cerrar Juego</button>
-      <iframe id="game-iframe" src="" frameborder="0"></iframe>
     </section>
 
     <!-- Sobre el Studio -->
@@ -45,19 +39,6 @@
   <footer>
     <p>© 2026 Mount's Studios. Todos los derechos reservados.</p>
   </footer>
-
-  <script>
-    function abrirJuego(ruta) {
-      document.getElementById('iframe-container').style.display = 'block';
-      document.getElementById('game-iframe').src = ruta;
-      window.scrollTo({ top: document.getElementById('iframe-container').offsetTop, behavior: 'smooth' });
-    }
-
-    function cerrarJuego() {
-      document.getElementById('iframe-container').style.display = 'none';
-      document.getElementById('game-iframe').src = '';
-    }
-  </script>
 
 </body>
 </html>
