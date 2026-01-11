@@ -1,78 +1,147 @@
+/* ------------------------------
+   BASE
+--------------------------------*/
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle, #8B0000, #111);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #0b0b0b, #1c0b0b);
   color: #fff;
+  overflow-x: hidden;
 }
 
+/* ------------------------------
+   HEADER
+--------------------------------*/
 header {
   text-align: center;
-  padding: 2em;
-  background: linear-gradient(to bottom, rgba(50,0,0,0.9), rgba(10,0,0,0.7));
-  box-shadow: 0 5px 20px rgba(255,0,0,0.3);
+  padding: 3em 1em;
+  background: linear-gradient(180deg, rgba(80,0,0,0.85), rgba(20,0,0,0.7));
+  box-shadow: 0 10px 30px rgba(255,0,0,0.3);
 }
-header h1 { font-size: 2.5em; margin-bottom: 0.2em; color: #FF4500; }
-header p { font-size: 1.2em; color: #ccc; }
 
+header h1 {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  color: #FF4C00;
+  text-shadow: 0 0 10px rgba(255,76,0,0.8);
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+  text-shadow: 0 0 5px rgba(255,255,255,0.1);
+}
+
+/* ------------------------------
+   SECCIÓN DE JUEGOS
+--------------------------------*/
 .juegos {
-  padding: 2em;
+  padding: 3em 1em;
   text-align: center;
 }
-.juegos h2 { font-size: 2em; margin-bottom: 1em; color: #FF6347; }
 
+.juegos h2 {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  color: #FF6347;
+  text-shadow: 0 0 10px rgba(255,99,71,0.6);
+}
+
+/* TARJETA DE JUEGO */
 .juego-card {
-  background: linear-gradient(145deg, rgba(40,0,0,0.7), rgba(90,0,0,0.5));
-  padding: 1.5em;
-  margin: 1em auto;
+  background: linear-gradient(145deg, rgba(50,0,0,0.8), rgba(100,0,0,0.5));
   border-radius: 20px;
   width: 80%;
-  max-width: 400px;
-  box-shadow: 0 10px 30px rgba(255,0,0,0.4);
-  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 500px;
+  margin: 2em auto;
+  padding: 2em;
+  box-shadow: 0 15px 40px rgba(255,50,50,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
-.juego-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 50px rgba(255,80,80,0.7);
-}
-.juego-card h3 { font-size: 1.5em; color: #FF4500; margin-bottom: 0.5em; }
-.juego-card p { font-size: 1em; margin-bottom: 1em; }
 
+.juego-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 20px 60px rgba(255,80,80,0.6);
+  filter: brightness(1.05);
+}
+
+.juego-card h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #FF4500;
+  text-shadow: 0 0 10px rgba(255,69,0,0.8);
+}
+
+.juego-card p {
+  font-size: 1.1em;
+  margin-bottom: 1.2em;
+  color: #ddd;
+}
+
+/* BOTONES */
 .boton {
-  background-color: #FF4500;
-  color: white;
+  background: linear-gradient(145deg, #FF4500, #FF6347);
+  color: #fff;
+  padding: 0.8em 1.6em;
   border: none;
-  padding: 0.7em 1.4em;
-  border-radius: 12px;
+  border-radius: 15px;
+  font-weight: bold;
   cursor: pointer;
   margin: 0.3em;
-  font-weight: bold;
-  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 0 15px rgba(255,69,0,0.5);
+  transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
 }
+
 .boton:hover {
   transform: scale(1.05);
-  background-color: #FF6347;
+  background: linear-gradient(145deg, #FF6347, #FF4500);
+  box-shadow: 0 0 25px rgba(255,99,71,0.8);
 }
 
+/* ------------------------------
+   SOBRE MOUNT'S STUDIOS
+--------------------------------*/
 .sobre-mi {
-  margin: 3em auto;
+  margin: 4em auto;
   padding: 2em;
-  max-width: 600px;
-  background: linear-gradient(to bottom right, rgba(60,0,0,0.7), rgba(20,0,0,0.6));
+  max-width: 700px;
+  background: linear-gradient(to bottom right, rgba(60,0,0,0.8), rgba(20,0,0,0.6));
   border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(255,30,30,0.3);
+  box-shadow: 0 15px 40px rgba(255,30,30,0.3);
   text-align: center;
 }
-.sobre-mi h2 { font-size: 2em; color: #FF4500; margin-bottom: 0.5em; }
-.sobre-mi p { font-size: 1em; line-height: 1.5em; }
 
+.sobre-mi h2 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+  color: #FF4500;
+  text-shadow: 0 0 10px rgba(255,69,0,0.6);
+}
+
+.sobre-mi p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  color: #eee;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
 footer {
   text-align: center;
-  padding: 1.5em;
-  background: linear-gradient(to top, rgba(30,0,0,0.8), rgba(10,0,0,0.6));
-  font-size: 0.9em;
+  padding: 2em;
+  background: linear-gradient(to top, rgba(30,0,0,0.85), rgba(10,0,0,0.6));
+  font-size: 1em;
   color: #ccc;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
 @media(max-width:768px){
-  .juego-card { width: 95%; }
+  .juego-card { width: 95%; padding: 1.5em; }
+  header h1 { font-size: 2.2em; }
+  .sobre-mi { width: 95%; padding: 1.5em; }
 }
+
