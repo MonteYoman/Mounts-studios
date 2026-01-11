@@ -10,73 +10,34 @@
 
   <header>
     <h1>🎮 Mount's Studios</h1>
-    <p>¡Juega a todos nuestros juegos directamente desde aquí!</p>
+    <p>¡Juega a nuestros juegos directamente desde la web!</p>
   </header>
 
   <main>
 
-    <!-- Sección Juegos -->
+    <!-- Sección de juegos -->
     <section class="juegos">
-      <h2>Galería de Juegos</h2>
-      <div class="galeria">
+      <h2>Juegos Disponibles</h2>
 
-        <!-- Juego 1 -->
-        <div class="juego-card">
-          <img src="assets/imagenes-miniaturas/juego1.png" alt="The Night Flier">
-          <div class="juego-info">
-            <h3>The Night Flier</h3>
-            <p>Un juego 2D de acción donde sobrevuelas la noche evitando obstáculos y enemigos.</p>
-            <a class="boton" href="juegos/juego1/index.html" target="_blank">▶ Jugar</a>
-            <button class="boton" onclick="abrirIframe('juego1')">🔲 Jugar aquí</button>
-          </div>
-        </div>
-
-        <!-- Juego 2 -->
-        <div class="juego-card">
-          <img src="assets/imagenes-miniaturas/juego2.png" alt="Misterioso">
-          <div class="juego-info">
-            <h3>Misterioso</h3>
-            <p>Explora lo desconocido y resuelve los misterios que te esperan.</p>
-            <a class="boton" href="#" onclick="alert('👀 Huy... esto es muy sospechoso'); return false;">🕵 Huy...</a>
-          </div>
-        </div>
-
+      <div class="juego-card">
+        <h3>The Night Flier</h3>
+        <p>Sobrevuela la noche, esquiva enemigos y supera todos los desafíos.</p>
+        <button class="boton" onclick="abrirJuego('juegos1/index.html')">▶ Jugar aquí</button>
+        <a class="boton" href="juegos1/index.html" target="_blank">🔗 Abrir en nueva ventana</a>
       </div>
+
     </section>
 
-    <!-- Iframe para jugar en la misma página -->
+    <!-- Iframe del juego -->
     <section id="iframe-container">
-      <button class="boton" onclick="cerrarIframe()">❌ Cerrar Juego</button>
+      <button class="boton cerrar" onclick="cerrarJuego()">❌ Cerrar Juego</button>
       <iframe id="game-iframe" src="" frameborder="0"></iframe>
     </section>
 
-    <!-- Clasificación -->
-    <section class="clasificacion">
-      <h2>Tabla de Clasificación</h2>
-      <div class="tabla-contenedor">
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Juego</th>
-              <th>Puntos</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>ShadowPlayer</td><td>The Night Flier</td><td>9580</td></tr>
-            <tr><td>MonteYoman</td><td>The Night Flier</td><td>8410</td></tr>
-            <tr><td>NovaHunter</td><td>The Night Flier</td><td>7730</td></tr>
-            <tr><td>FlameGhost</td><td>The Night Flier</td><td>6890</td></tr>
-            <tr><td>CodeX</td><td>The Night Flier</td><td>6100</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Sobre mí -->
+    <!-- Sobre el Studio -->
     <section class="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy un desarrollador con experiencia en juegos 2D y 3D, trabajando en proyectos creativos desde hace 2 años. Aquí comparto mis juegos favoritos y mis ideas en desarrollo.</p>
+      <h2>Sobre Mount's Studios</h2>
+      <p>Somos un estudio indie especializado en juegos 2D y 3D. Nuestra misión es crear experiencias únicas y visualmente impactantes que puedas disfrutar desde tu navegador.</p>
     </section>
 
   </main>
@@ -85,19 +46,14 @@
     <p>© 2026 Mount's Studios. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Burbuja Discord -->
-  <a href="https://discord.gg/TzxmZaCR5J" target="_blank" class="discord-bubble" title="Únete a nuestro Discord">
-    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg" alt="Discord">
-  </a>
-
   <script>
-    function abrirIframe(juego) {
+    function abrirJuego(ruta) {
       document.getElementById('iframe-container').style.display = 'block';
-      document.getElementById('game-iframe').src = 'juegos/' + juego + '/index.html';
+      document.getElementById('game-iframe').src = ruta;
       window.scrollTo({ top: document.getElementById('iframe-container').offsetTop, behavior: 'smooth' });
     }
 
-    function cerrarIframe() {
+    function cerrarJuego() {
       document.getElementById('iframe-container').style.display = 'none';
       document.getElementById('game-iframe').src = '';
     }
@@ -105,4 +61,3 @@
 
 </body>
 </html>
-
