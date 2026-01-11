@@ -1,9 +1,9 @@
-/* Estilo general */
+/* Base */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle, #8B0000, #111); /* Degradado rojo al negro */
+  background: radial-gradient(circle, #8B0000, #111);
   color: #fff;
 }
 
@@ -15,74 +15,64 @@ header {
   border-bottom: 1px solid rgba(255, 50, 50, 0.2);
   box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
 }
+header h1 { font-size: 2.4em; margin-bottom: 0.2em; }
+header p { font-size: 1.1em; color: #ddd; }
 
-header h1 {
-  font-size: 2.2em;
-  margin-bottom: 0.2em;
-}
+/* Main */
+main { padding: 2em; }
 
-header p {
-  font-size: 1.1em;
-  color: #ddd;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5em;
-  background: linear-gradient(to top, rgba(30, 0, 0, 0.8), rgba(10, 0, 0, 0.6));
-  border-top: 1px solid rgba(255, 50, 50, 0.2);
-  font-size: 0.9em;
-  color: #ccc;
-}
-
-/* Contenido principal */
-main {
-  padding: 2em;
-}
-
-/* Sección de juegos */
-.juegos {
+/* Galería de Juegos */
+.galeria {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 3em;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.juego {
-  backdrop-filter: blur(12px);
-  background: linear-gradient(145deg, rgba(40, 0, 0, 0.7), rgba(90, 0, 0, 0.5));
-  border: 1px solid rgba(255, 80, 80, 0.2);
-  padding: 2em 1.5em;
-  margin: 1.5em 0;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 25px;
-  box-shadow: 0 12px 30px rgba(255, 30, 30, 0.3);
+.juego-card {
+  background: linear-gradient(145deg, rgba(40,0,0,0.7), rgba(90,0,0,0.5));
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
   text-align: center;
+  box-shadow: 0 12px 30px rgba(255,30,30,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.juego h3 {
-  margin-bottom: 1em;
+.juego-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 50px rgba(255,80,80,0.6);
 }
 
-.juego:hover {
-  transform: scale(1.03);
-  box-shadow: 0 16px 40px rgba(255, 80, 80, 0.6);
+.juego-card img {
+  width: 100%;
+  display: block;
+}
+
+.juego-info {
+  padding: 1em;
+}
+
+.juego-info h3 {
+  margin-bottom: 0.5em;
+}
+
+.juego-info p {
+  font-size: 0.9em;
+  margin-bottom: 1em;
 }
 
 /* Botones */
 .boton {
   background-color: #FF4500;
   color: white;
-  padding: 0.8em 1.6em;
+  padding: 0.7em 1.4em;
   border: none;
   border-radius: 12px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 0.5em;
-  box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+  margin: 0.3em;
+  cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
@@ -91,98 +81,58 @@ main {
   background-color: #FF6347;
 }
 
-/* Sección "Sobre mí" */
-.sobre-mi {
-  margin-top: 4em;
-  padding: 2em;
-  background: linear-gradient(to bottom right, rgba(60, 0, 0, 0.7), rgba(20, 0, 0, 0.6));
-  border-radius: 25px;
-  border: 1px solid rgba(255, 80, 80, 0.2);
-  box-shadow: 0 10px 30px rgba(255, 30, 30, 0.25);
-  backdrop-filter: blur(10px);
+/* Iframe de juego */
+#iframe-container {
+  display: none;
+  text-align: center;
+  margin: 2em 0;
+}
+#iframe-container iframe {
+  width: 80%;
+  height: 500px;
+  border: 2px solid #FF4500;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(255, 30, 30, 0.3);
 }
 
 /* Clasificación */
-.clasificacion {
-  margin-top: 4em;
+.clasificacion { margin-top: 3em; text-align: center; }
+.clasificacion table { margin: 0 auto; border-collapse: collapse; width: 90%; background-color: rgba(0,0,0,0.2); border-radius: 15px; overflow: hidden; }
+.clasificacion th, .clasificacion td { padding: 0.6em; border-bottom: 1px solid rgba(255,255,255,0.1); text-align: center; }
+.clasificacion th { background-color: rgba(255,50,50,0.3); }
+
+/* Sobre mí */
+.sobre-mi {
+  margin-top: 3em;
   padding: 2em;
-  background: linear-gradient(to bottom right, rgba(60, 0, 0, 0.7), rgba(20, 0, 0, 0.6));
+  background: linear-gradient(to bottom right, rgba(60,0,0,0.7), rgba(20,0,0,0.6));
   border-radius: 25px;
-  border: 1px solid rgba(255, 80, 80, 0.2);
-  box-shadow: 0 10px 30px rgba(255, 30, 30, 0.25);
-  backdrop-filter: blur(10px);
-  color: #fff;
+  box-shadow: 0 10px 30px rgba(255,30,30,0.25);
+}
+
+/* Footer */
+footer {
   text-align: center;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.clasificacion h2 {
-  margin-bottom: 1em;
-  font-size: 1.5em;
-}
-
-.tabla-contenedor {
-  display: flex;
-  justify-content: center;
-}
-
-.clasificacion table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  overflow: hidden;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+  padding: 1.5em;
+  background: linear-gradient(to top, rgba(30,0,0,0.8), rgba(10,0,0,0.6));
+  border-top: 1px solid rgba(255,50,50,0.2);
   font-size: 0.9em;
+  color: #ccc;
 }
 
-.clasificacion th,
-.clasificacion td {
-  padding: 0.6em;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.clasificacion th {
-  background-color: rgba(255, 50, 50, 0.3);
-  font-weight: bold;
-  color: #fff;
-}
-
-.clasificacion tr:last-child td {
-  border-bottom: none;
-}
-
-.clasificacion tr:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Burbuja Discord */
+/* Discord */
 .discord-bubble {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #5865F2;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 999;
+  position: fixed; bottom: 20px; right: 20px;
+  width: 60px; height: 60px; background-color: #5865F2;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; z-index: 999;
 }
+.discord-bubble img { width: 30px; height: 30px; }
+.discord-bubble:hover { transform: scale(1.1); box-shadow: 0 12px 30px rgba(0,0,0,0.5); }
 
-.discord-bubble img {
-  width: 30px;
-  height: 30px;
-}
-
-.discord-bubble:hover {
-  transform: scale(1.1);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+/* Responsive */
+@media(max-width:768px){
+  .galeria { flex-direction: column; align-items: center; }
+  #iframe-container iframe { width: 95%; height: 400px; }
 }
