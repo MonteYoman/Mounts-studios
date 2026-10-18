@@ -3,42 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mount's Studios</title>
+  <title>Mount’s Studios: juegos gratis para jugar en el navegador</title>
+  <meta name="description" content="Juegos indie gratis que se juegan directamente en el navegador, sin descargar nada. Prueba The Night Flier.">
+  <meta name="theme-color" content="#0d0709">
+  <meta property="og:title" content="Mount’s Studios">
+  <meta property="og:description" content="Juegos indie gratis para jugar en el navegador. Prueba The Night Flier.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Teko:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <h1>🎮 Mount's Studios</h1>
-    <p>¡Juega a nuestros juegos directamente desde la web!</p>
+ 
+  <header class="hero">
+    <div class="moon" aria-hidden="true"></div>
+    <h1>Mount’s Studios</h1>
+    <p>Juegos indie gratis. Se juegan en el navegador, sin descargar nada.</p>
+    <a class="boton" href="juego1/index.html" target="_blank" rel="noopener">Jugar The Night Flier</a>
   </header>
-
+ 
   <main>
-
-    <!-- Sección de juegos -->
-    <section class="juegos">
-      <h2>Juegos Disponibles</h2>
-
-      <div class="juego-card">
-        <h3>The Night Flier</h3>
-        <p>Sobrevuela la noche, esquiva enemigos y supera todos los desafíos.</p>
-        <!-- Botón corregido -->
-        <button class="boton" onclick="window.open('juego1/index.html', '_blank')">▶ Jugar aquí</button>
+ 
+    <section class="wrap" id="juegos">
+      <h2>Nuestros juegos</h2>
+ 
+      <div class="grid">
+ 
+        <article class="card featured">
+          <!-- Cuando tengas una captura del juego, guárdala como juego1.jpg junto a este archivo
+               y cambia la línea del arte por: <img class="art" src="juego1.jpg" alt="Captura de The Night Flier"> -->
+          <div class="art" aria-hidden="true">🦇</div>
+          <div class="info">
+            <h3>The Night Flier</h3>
+            <p>Sobrevuela la noche, esquiva enemigos y supera todos los desafíos.</p>
+            <a class="boton" href="juego1/index.html" target="_blank" rel="noopener">Jugar ahora</a>
+          </div>
+        </article>
+ 
+        <article class="card soon">
+          <div class="art" aria-hidden="true">🛠️</div>
+          <div class="info">
+            <h3>Próximo juego</h3>
+            <p>Estamos trabajando en él. Muy pronto podrás jugarlo aquí.</p>
+            <span class="pronto">En desarrollo</span>
+          </div>
+        </article>
+ 
       </div>
-
     </section>
-
-    <!-- Sobre el Studio -->
-    <section class="sobre-mi">
-      <h2>Sobre Mount's Studios</h2>
+ 
+    <!-- Aquí puedes poner un anuncio cuando tengas AdSense -->
+ 
+    <section class="wrap sobre">
+      <h2>Sobre Mount’s Studios</h2>
       <p>Somos un estudio indie especializado en juegos 2D y 3D. Nuestra misión es crear experiencias únicas y visualmente impactantes que puedas disfrutar desde tu navegador.</p>
     </section>
-
+ 
   </main>
-
+ 
   <footer>
-    <p>© 2026 Mount's Studios. Todos los derechos reservados.</p>
+    <p>© 2026 Mount’s Studios. Todos los derechos reservados.</p>
+    <!-- Cuando tengas la página de privacidad, añade aquí un enlace a privacidad.html -->
   </footer>
-
+ 
 </body>
 </html>
