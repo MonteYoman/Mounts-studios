@@ -1,147 +1,190 @@
 /* ------------------------------
    BASE
 --------------------------------*/
+:root {
+  --ink: #0d0709;
+  --panel: #1a0d10;
+  --blood: #7a1620;
+  --ember: #ff5a1f;
+  --gold: #ffb347;
+  --text: #f3e6dc;
+  --muted: #bfa9a0;
+}
+ 
+* { box-sizing: border-box; margin: 0; }
+ 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #0b0b0b, #1c0b0b);
-  color: #fff;
+  background: var(--ink);
+  color: var(--text);
+  font: 400 1.05rem/1.55 Barlow, 'Segoe UI', system-ui, sans-serif;
   overflow-x: hidden;
 }
-
+ 
+h1, h2, h3 { font-family: Teko, 'Segoe UI', system-ui, sans-serif; font-weight: 600; line-height: 1.05; }
+ 
 /* ------------------------------
-   HEADER
+   HEADER: cielo de noche con luna
 --------------------------------*/
-header {
+.hero {
+  position: relative;
+  overflow: hidden;
   text-align: center;
-  padding: 3em 1em;
-  background: linear-gradient(180deg, rgba(80,0,0,0.85), rgba(20,0,0,0.7));
-  box-shadow: 0 10px 30px rgba(255,0,0,0.3);
+  padding: 5rem 1.25rem 4.5rem;
+  background:
+    radial-gradient(ellipse at 80% 0%, rgba(122, 22, 32, .55), transparent 55%),
+    linear-gradient(180deg, #14070b 0%, var(--ink) 100%);
 }
-
-header h1 {
-  font-size: 3em;
-  margin-bottom: 0.2em;
-  color: #FF4C00;
-  text-shadow: 0 0 10px rgba(255,76,0,0.8);
+ 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .75;
+  background-image:
+    radial-gradient(1.5px 1.5px at 8% 24%, #fff, transparent),
+    radial-gradient(1px 1px at 17% 62%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 27% 14%, #ffe4c4, transparent),
+    radial-gradient(1px 1px at 36% 74%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 47% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 58% 82%, #ffe4c4, transparent),
+    radial-gradient(1.5px 1.5px at 66% 18%, #fff, transparent),
+    radial-gradient(1px 1px at 74% 58%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 90% 70%, #ffe4c4, transparent),
+    radial-gradient(1px 1px at 95% 36%, #fff, transparent);
 }
-
-header p {
-  font-size: 1.2em;
-  color: #ccc;
-  text-shadow: 0 0 5px rgba(255,255,255,0.1);
+ 
+.moon {
+  position: absolute;
+  top: 2rem;
+  right: max(6%, 1.2rem);
+  width: clamp(64px, 14vw, 130px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff3df, #f0c98f 60%, #c9915a);
+  box-shadow: 0 0 60px rgba(255, 179, 71, .35);
 }
-
+ 
+.hero > :not(.moon) { position: relative; }
+ 
+.hero h1 {
+  font-size: clamp(2.8rem, 10vw, 5.5rem);
+  color: #fff2e6;
+  text-shadow: 0 0 30px rgba(255, 90, 31, .45);
+}
+ 
+.hero p {
+  max-width: 34ch;
+  margin: .8rem auto 1.8rem;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+ 
+/* ------------------------------
+   BOTONES
+--------------------------------*/
+.boton {
+  display: inline-block;
+  background: var(--ember);
+  color: #1a0600;
+  text-decoration: none;
+  font-weight: 600;
+  padding: .75rem 1.5rem;
+  border-radius: 12px;
+  transition: background .2s, transform .2s;
+}
+ 
+.boton:hover { background: var(--gold); transform: translateY(-2px); }
+.boton:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+ 
 /* ------------------------------
    SECCIÓN DE JUEGOS
 --------------------------------*/
-.juegos {
-  padding: 3em 1em;
-  text-align: center;
+.wrap { max-width: 1000px; margin: 0 auto; padding: 3rem 1.25rem; }
+ 
+.wrap h2 { font-size: 2.4rem; margin-bottom: 1.2rem; }
+ 
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
-
-.juegos h2 {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-  color: #FF6347;
-  text-shadow: 0 0 10px rgba(255,99,71,0.6);
+ 
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid rgba(255, 138, 76, .25);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform .25s, border-color .25s;
 }
-
-/* TARJETA DE JUEGO */
-.juego-card {
-  background: linear-gradient(145deg, rgba(50,0,0,0.8), rgba(100,0,0,0.5));
-  border-radius: 20px;
-  width: 80%;
-  max-width: 500px;
-  margin: 2em auto;
-  padding: 2em;
-  box-shadow: 0 15px 40px rgba(255,50,50,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+ 
+.card:hover { transform: translateY(-4px); border-color: rgba(255, 138, 76, .6); }
+ 
+.art {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+  font-size: 4.5rem;
+  background: linear-gradient(160deg, #2a0f18, #5a1420 55%, #a53a16);
 }
-
-.juego-card:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 20px 60px rgba(255,80,80,0.6);
-  filter: brightness(1.05);
+ 
+.info { padding: 1.2rem 1.4rem 1.5rem; }
+.info h3 { font-size: 1.9rem; }
+.info p { color: var(--muted); margin: .4rem 0 1.1rem; }
+ 
+.featured { grid-column: 1 / -1; }
+ 
+.soon { border-style: dashed; }
+.soon:hover { transform: none; border-color: rgba(255, 138, 76, .25); }
+.soon .art { filter: grayscale(1) brightness(.7); }
+ 
+.pronto {
+  display: inline-block;
+  padding: .7rem 1.3rem;
+  border: 2px dashed var(--muted);
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 600;
 }
-
-.juego-card h3 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
-  color: #FF4500;
-  text-shadow: 0 0 10px rgba(255,69,0,0.8);
-}
-
-.juego-card p {
-  font-size: 1.1em;
-  margin-bottom: 1.2em;
-  color: #ddd;
-}
-
-/* BOTONES */
-.boton {
-  background: linear-gradient(145deg, #FF4500, #FF6347);
-  color: #fff;
-  padding: 0.8em 1.6em;
-  border: none;
-  border-radius: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 0.3em;
-  box-shadow: 0 0 15px rgba(255,69,0,0.5);
-  transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
-}
-
-.boton:hover {
-  transform: scale(1.05);
-  background: linear-gradient(145deg, #FF6347, #FF4500);
-  box-shadow: 0 0 25px rgba(255,99,71,0.8);
-}
-
+ 
 /* ------------------------------
    SOBRE MOUNT'S STUDIOS
 --------------------------------*/
-.sobre-mi {
-  margin: 4em auto;
-  padding: 2em;
-  max-width: 700px;
-  background: linear-gradient(to bottom right, rgba(60,0,0,0.8), rgba(20,0,0,0.6));
-  border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(255,30,30,0.3);
-  text-align: center;
-}
-
-.sobre-mi h2 {
-  font-size: 2.2em;
-  margin-bottom: 0.5em;
-  color: #FF4500;
-  text-shadow: 0 0 10px rgba(255,69,0,0.6);
-}
-
-.sobre-mi p {
-  font-size: 1.1em;
-  line-height: 1.6em;
-  color: #eee;
-}
-
+.sobre { max-width: 700px; padding-top: 1rem; }
+.sobre p { color: var(--text); max-width: 62ch; }
+ 
 /* ------------------------------
    FOOTER
 --------------------------------*/
 footer {
   text-align: center;
-  padding: 2em;
-  background: linear-gradient(to top, rgba(30,0,0,0.85), rgba(10,0,0,0.6));
-  font-size: 1em;
-  color: #ccc;
-  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  padding: 2rem 1rem 2.5rem;
+  border-top: 1px solid rgba(255, 138, 76, .2);
+  color: var(--muted);
+  font-size: .95rem;
 }
-
+ 
+/* ------------------------------
+   MOVIMIENTO (solo si el usuario no lo desactiva)
+--------------------------------*/
+@media (prefers-reduced-motion: no-preference) {
+  .hero > :not(.moon) { animation: subir .7s ease-out both; }
+  .hero p { animation-delay: .1s; }
+  .hero .boton { animation-delay: .2s; }
+  .moon { animation: aparecer 1.4s ease-out both; }
+}
+ 
+@keyframes subir { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
+ 
 /* ------------------------------
    RESPONSIVE
 --------------------------------*/
-@media(max-width:768px){
-  .juego-card { width: 95%; padding: 1.5em; }
-  header h1 { font-size: 2.2em; }
-  .sobre-mi { width: 95%; padding: 1.5em; }
+@media (min-width: 720px) {
+  .featured { flex-direction: row; }
+  .featured .art { flex: 1.1; aspect-ratio: auto; min-height: 260px; }
+  .featured .info { flex: 1; align-self: center; padding: 2rem; }
 }
-
